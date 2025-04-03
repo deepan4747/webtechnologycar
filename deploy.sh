@@ -4,7 +4,7 @@ chmod +x build.sh
 ./build.sh
 docker login -u deepan47 -p Deepan11032004
 # Use non-interactive login
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+echo "Deepan11032004" | docker login -u "deepan47" --password-stdin
 
 # Tag and push the image
 docker tag car-app deepan47/car-app
