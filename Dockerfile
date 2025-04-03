@@ -1,19 +1,11 @@
-FROM node:18
+# Use Nginx as the base image
+FROM nginx:latest
 
-# Set working directory
-WORKDIR /app
+# Copy index.html to the Nginx HTML directory
+COPY car.html /usr/share/nginx/html/
 
-# Copy package.json and package-lock.json
-COPY car/package.json car/package-lock.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the entire project
-COPY car/ ./
-
-# Expose the port the app runs on
+# Expose port 80
 EXPOSE 80
 
-# Start the application
-CMD ["npm", "start"]
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
