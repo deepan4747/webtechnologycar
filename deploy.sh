@@ -10,4 +10,4 @@ echo "Deepan11032004" | docker login -u "deepan47" --password-stdin
 docker tag finaltask deepan47/finaltask
 docker push deepan47/finaltask
 docker pull deepan47/finaltask
-docker run -d -p 8000:80 --name=my-service-repo deepan47/finaltask
+docker run -d -p 8050:80 --name=my-service-repo deepan47/finaltask
